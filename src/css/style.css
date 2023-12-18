@@ -1,55 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
 
-*{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(37, 37, 41);
+    text-align: center;
 }
 
-body {
-    height: 100vh;
-    background-color: #252529;
-}
-
-.navbar{
+.header-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 15vh;
-    padding: 0 50px;
+    margin: 0 5vw 0 5vw;
 }
 
-.navbar h1{
-    font-weight: 500;
+.header-bar h1 {
+    display: flex;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 6px;
     color: #6aa0ff;
 }
 
-.navbar ul{
+.header-bar nav {
     display: flex;
+    justify-content: space-between;
+    margin: auto;
 }
 
-.navbar ul li{
-    list-style: none;
-}
-
-.navbar ul li a{
+.header-bar nav a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
-    margin-right: 25px;
+    margin: auto 25px;
     transition: color 0.3s ease;
 }
 
-.navbar ul li:hover a{
+.header-bar a:hover {
     color: #6aa0ff;
 }
 
-.navbar ul li:last-child a{
+.hire-me-btn {
     margin: 0;
-}
-
-.hire-me-btn{
     background: #6aa0ff;
     font-weight: 700;
     padding: 6px 30px;
@@ -60,43 +58,85 @@ body {
     transition: 0.3s ease;
 }
 
-.hire-me-btn:hover{
+.hire-me-btn:hover {
     background-color: #0354e7;
     color: white;
 }
 
-main{
-    height: 85vh;
+main {
+    /*height: 78vh;*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-main h2,h3,h4{
+#home-titles h2, h3, p, span {
     color: #fff;
     letter-spacing: 2px;
 }
 
-main h2{
+#home-titles h2 {
     font-size: 35px;
     font-weight: 300;
+    margin-top: 50px;
 }
 
-main h2 span{
+#home-titles h2 span {
     color: #6aa0ff;
     font-weight: 500;
     letter-spacing: 5px;
 }
 
-main h3{
+#home-titles h3 {
     font-size: 40px;
     font-weight: 500;
     margin-top: 8px;
 }
 
-main h4{
+#home-titles p {
     font-size: 20px;
     font-weight: 200;
+    margin-top: 20px;
 }
 
+#home-cards {
+    margin-top: 50px;
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    width: 90vw;
+}
+
+.home-card {
+    color: black;
+    background: #6aa0ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.home-card:hover{
+
+}
+
+footer {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+footer p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 100;
+}
