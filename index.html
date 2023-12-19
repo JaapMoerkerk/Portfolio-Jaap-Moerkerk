@@ -11,15 +11,15 @@
 </head>
 <body>
 <header class="header-bar">
-    <div class="row">
+    <div class="row title-image">
         <img src="./src/img/profile-picture-jaap.jpg" alt="Profile picture of me">
         <h1>Jaap Moerkerk</h1>
     </div>
     <nav>
         <a href="/">Home</a>
         <a href="/portfolio">Portfolio</a>
-        <a href="#">Expertise</a>
         <a href="#">About me</a>
+        <a href="#">Experience & Skills</a>
         <a href="#">Contact</a>
     </nav>
     <button class="hire-me-btn">Hire me</button>
@@ -47,9 +47,9 @@
             </div>
         </div>
 
-<div class="home-card">
+        <div class="home-card about-card">
             <div class="card-icon">
-                <i class='bx bxs-user'></i>            </div>
+                <i class='bx bxs-user'></i></div>
             <div class="card-text">
                 <h4>About</h4>
                 <p>find out who I am</p>
@@ -59,7 +59,7 @@
             </div>
         </div>
 
-<div class="home-card">
+        <div class="home-card">
             <div class="card-icon">
                 <i class='bx bxs-megaphone'></i>
             </div>
@@ -73,11 +73,45 @@
         </div>
     </section>
 
-    <section class="about-me">
-        <h2>About me</h2>
-
+    <section id="about-me">
+        <div class="column about-me-text">
+            <h2>About me</h2>
+            <p>
+                I am a creative fullstack developer that specializes in front end development and website design.
+                <br><br>
+                With <span class="prim-blue">5+ years</span> of coding experience and a passion for design & tech, I am
+                constantly expanding my professional scope with development projects, personal or commercial.
+                I've always been interested in the more social sides of the field, which is why I started my own
+                freelance web design agency
+                <span class="prim-blue"><a href="#">Web Design Jaap</a></span>, providing complete websites, hosting and
+                maintenance to small entrepreneurs and private endeavours.
+            </p>
+        </div>
+        <img src="./src/img/portrait-picture-jaap.jpg" alt="Portrait picture">
     </section>
 
+    <section id="skills">
+        <h2>Programming languages, frameworks & skills</h2>
+        <div class="skills-icons">
+            <i class='bx bxl-html5'></i>
+            <i class='bx bxl-css3'></i>
+            <i class='bx bxl-php'></i>
+            <i class="bx bxl-javascript"></i>
+            <i class="bx bxl-nodejs"></i>
+            <i class='bx bxl-react'></i>
+            <i class="bx bxl-c-plus-plus"></i>
+            <i class="bx bxl-mongodb"></i>
+        </div>
+    </section>
+    <div class="row half-page-cards">
+
+        <section id="experience" class="half-page-card">
+            <h2>Experience</h2>
+        </section>
+        <section id="education" class="half-page-card">
+            <h2>Education</h2>
+        </section>
+    </div>
 </main>
 
 <footer>
