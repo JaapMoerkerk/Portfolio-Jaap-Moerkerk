@@ -10,53 +10,81 @@
     <title>Jaap Moerkerk - Creative Developer</title>
 </head>
 <body>
-    <header class="header-bar">
+<header class="header-bar">
+    <div class="row">
+        <img src="./src/img/profile-picture-jaap.jpg" alt="Profile picture of me">
         <h1>Jaap Moerkerk</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Expertise</a>
-            <a href="#">About me</a>
-            <a href="#">Contact</a>
-        </nav>
-        <button class="hire-me-btn">Hire me</button>
-    </header>
+    </div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="#">Expertise</a>
+        <a href="#">About me</a>
+        <a href="#">Contact</a>
+    </nav>
+    <button class="hire-me-btn">Hire me</button>
+</header>
 
 <main>
     <section id="home-titles">
-    <h2>This is <span>Jaap Moerkerk</span></h2>
-    <h3>Creative Full Stack Web Developer</h3>
-    <span>. . . . . .</span>
-    <p>Design | Development | Creative Thinking | Commercial Implementation</p>
+        <h2>This is <span>Jaap Moerkerk</span></h2>
+        <h3>Creative Full Stack Web Developer</h3>
+        <span>. . . . . .</span>
+        <p>Design | Development | Creative Thinking | Commercial Implementation</p>
     </section>
 
     <section id="home-cards">
         <div class="home-card">
-            <i class='bx bx-windows' ></i>
-            <h4>Portfolio</h4>
-            <p>check out what I do</p>
-            <i class="bx bx-chevron-right"></i>
+            <div class="card-icon">
+                <i class='bx bx-windows'></i>
+            </div>
+            <div class="card-text">
+                <h4>Portfolio</h4>
+                <p>check out what I do</p>
+            </div>
+            <div class="arrow-icon">
+                <i class="bx bx-chevron-right"></i>
+            </div>
         </div>
 
-        <div class="home-card">
-            <i class='bx bxs-megaphone'></i>
-            <h4>Contact</h4>
-            <p>get in touch with me</p>
-            <i class="bx bx-chevron-right"></i>
+<div class="home-card">
+            <div class="card-icon">
+                <i class='bx bxs-user'></i>            </div>
+            <div class="card-text">
+                <h4>About</h4>
+                <p>find out who I am</p>
+            </div>
+            <div class="arrow-icon">
+                <i class="bx bx-chevron-right"></i>
+            </div>
         </div>
 
-        <div class="home-card">
-            <i class='bx bxs-user'></i>
-            <h4>About</h4>
-            <p>find out who I am</p>
-            <i class="bx bx-chevron-right"></i>
+<div class="home-card">
+            <div class="card-icon">
+                <i class='bx bxs-megaphone'></i>
+            </div>
+            <div class="card-text">
+                <h4>Contact</h4>
+                <p>reach me quickly</p>
+            </div>
+            <div class="arrow-icon">
+                <i class="bx bx-chevron-right"></i>
+            </div>
         </div>
+    </section>
+
+    <section class="about-me">
+        <h2>About me</h2>
 
     </section>
+
 </main>
 
 <footer>
-    <p>Copyright <i class='bx bxs-copyright'></i> <script>document.write(new Date().getFullYear());</script> | Jaap Moerkerk</p>
+    <p>Copyright <i class='bx bxs-copyright'></i>
+        <script>document.write(new Date().getFullYear());</script>
+        | Jaap Moerkerk
+    </p>
 </footer>
 
 </body>
