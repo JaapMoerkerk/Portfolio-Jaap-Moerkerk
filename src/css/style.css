@@ -78,20 +78,21 @@ body {
 }
 
 .hire-me-btn {
+    color: white;
     margin: 0;
-    background: #6aa0ff;
+    background: rgba(0,0,0,0.18);
     font-weight: 700;
     padding: 6px 30px;
-    border: none;
     font-size: 16px;
     cursor: pointer;
     border-radius: 6px;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
+    border: 1px solid rgba(0,0,0,0.18);
 }
 
 .hire-me-btn:hover {
-    background-color: #0354e7;
-    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid #6aa0ff;
 }
 
 /*Main*/
@@ -185,6 +186,7 @@ main {
 
 .home-card i {
     font-size: 25px;
+    transition: 0.2s ease;
 }
 
 .arrow-icon {
@@ -193,7 +195,7 @@ main {
 
 /*Section 'About me'*/
 #about-me {
-    margin: 10vh 10vh;
+    margin: 10vh 0;
     display: flex;
     align-items: center;
     width: 90vw;
@@ -202,17 +204,21 @@ main {
     justify-content: space-between;
     background: rgba(0, 0, 0, 0.18);
     border-radius: 50px 50px;
-    height: 400px;
     transition: 3s ease;
 }
 
 .about-me-text {
-    margin: 0 2vw;
+    margin: 5vh 2vw;
     transition: 2s ease;
     max-width: 45vw;
 }
 
 #about-me h2 {
+    color: #fff;
+    transition: 2s ease;
+}
+
+#about-me:hover h2{
     color: #6aa0ff;
 }
 
@@ -229,18 +235,19 @@ main {
 #about-me img {
     height: auto;
     border-radius: 10%;
-    border: 2px solid #6aa0ff;
+    border: 2px solid #fff;
     transition: 2s ease;
     margin: 0 2vw;
     max-width: 20vw;
 }
 
 #about-me:hover .about-me-text {
-    margin: 0 5vw 0 5vw;
+    margin: 5vh 5vw 5vh 5vw;
 }
 
 #about-me:hover img {
     margin: 0 5vw 0 0;
+    border: 2px solid #6aa0ff;
 }
 
 #about-me:hover img {
@@ -259,8 +266,7 @@ main {
 /*Section 'skills'*/
 #skills {
     width: 90vw;
-    min-height: 50vh;
-    /*background: #6aa0ff;*/
+    /*min-height: 50vh;*/
 }
 
 #skills h2 {
@@ -274,22 +280,48 @@ main {
     font-size: 3.5em;
     width: 90vw;
     justify-content: space-evenly;
+    min-height: 100px;
 }
 
 .skills-icons i {
-
     transition: 0.5s ease;
+    width: 100%;
 }
 
 .skills-icons i:hover {
     color: #6aa0ff;
     font-size: 1.5em;
+    cursor: pointer;
 }
 
 /*Sections 'Experience' en 'Education'*/
 .half-page-cards{
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 90vw;
+}
+
+.half-page-card{
+    width: 100%;
+    padding: 0 5vw;
+    margin: 0 1vw;
+    background: rgba(0,0,0,0.18);
+    border-radius: 25px;
+    color: #fff;
+    transition: 2s ease;
+}
+
+.half-page-card h2{
+    transition: 2s ease;
+}
+
+.half-page-card:hover{
+    background: rgba(0,0,0,0.5);
+    margin: 0 1vw;
+    padding: 0 5vw;
+}
+
+.half-page-card:hover h2{
+    color: #6aa0ff;
 }
 
 /*Footer*/
