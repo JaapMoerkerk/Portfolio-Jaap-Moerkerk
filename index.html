@@ -5,22 +5,23 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="./src/js/index.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <title>Jaap Moerkerk - Creative Developer</title>
 </head>
 <body>
-<header class="header-bar">
+<header id="home" class="header-bar">
     <div class="row title-image">
-        <img src="./src/img/profile-picture-jaap.jpg" alt="Profile picture of me">
+        <img src="src/img/profile-picture-jaap.jpg" alt="Profile picture of me">
         <h1>Jaap Moerkerk</h1>
     </div>
     <nav>
-        <a href="/">Home</a>
-        <a href="/portfolio">Portfolio</a>
-        <a href="#">About me</a>
-        <a href="#">Experience & Skills</a>
-        <a href="#">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about-me">About me</a>
+        <a href="#experience">Experience & Skills</a>
+        <a href="#contact">Contact</a>
     </nav>
     <button class="hire-me-btn">Hire me</button>
 </header>
@@ -43,7 +44,7 @@
                 <p>check out what I do</p>
             </div>
             <div class="arrow-icon">
-                <i class="bx bx-chevron-right"></i>
+                <i class="bx bx-chevron-down"></i>
             </div>
         </div>
 
@@ -55,7 +56,7 @@
                 <p>find out who I am</p>
             </div>
             <div class="arrow-icon">
-                <i class="bx bx-chevron-right"></i>
+                <i class="bx bx-chevron-down"></i>
             </div>
         </div>
 
@@ -65,10 +66,10 @@
             </div>
             <div class="card-text">
                 <h4>Contact</h4>
-                <p>reach me quickly</p>
+                <p>and useful links</p>
             </div>
             <div class="arrow-icon">
-                <i class="bx bx-chevron-right"></i>
+                <i class="bx bx-chevron-down"></i>
             </div>
         </div>
     </section>
@@ -87,7 +88,7 @@
                 maintenance to small entrepreneurs and private endeavours.
             </p>
         </div>
-        <img src="./src/img/portrait-picture-jaap.jpg" alt="Portrait picture">
+        <img src="src/img/portrait-picture-jaap.jpg" alt="Portrait picture">
     </section>
 
     <section id="skills">
@@ -106,14 +107,77 @@
 
     <div class="row half-page-cards">
         <section id="experience" class="half-page-card">
-            <h2>Experience</h2>
+            <h2>Work experience</h2>
+            <p>
+                <span class="bold-p-title">Web Design Jaap</span><br>
+                Freelance web design agency - Ouddorp, The Netherlands<br>
+                <span class="subtext">My own web design agency, providing complete website packages for small organisations | 2020 - Present</span>
+            </p>
+            <p>
+                <span class="bold-p-title">IT & Software Specialist</span><br>
+                De Vogel Financial Office - Middelharnis, The Netherlands<br>
+                <span class="subtext">In-house IT & software specialist for employee support & automation implementation | 2022 - Present</span>
+            </p>
+            <p>
+                <span class="bold-p-title">IT Project employee</span><br>
+                Government (municipality) of Gemeente Goeree-Overflakkee - Middelharnis, The Netherlands<br>
+                <span class="subtext">Involved in design, development and employee implementation of a new intranet for 500 employees | 2020 - 2022</span>
+            </p>
 
         </section>
         <section id="education" class="half-page-card">
             <h2>Education</h2>
-            <p>Currently</p>
+            <p>
+                <span class="bold-p-title">Creative Media & Game Technologies</span><br>
+                Hogeschool Rotterdam (Rotterdam University of Applied Sciences) - Rotterdam, The Netherlands<br>
+                <span class="subtext">Bachelor of Applied Sciences | 2022-2026</span>
+            </p>
+            <p>
+                <span class="bold-p-title">Computer Science & Graphic Design</span><br>
+                Santa Barbara Community College - Santa Barbara CA, United States<br>
+                <span class="subtext">Foundation course (Half Associate Degree) | 2021-2022</span>
+            </p>
+            <p>
+                <span class="bold-p-title">VWO Atheneum N&T (Science and bèta profile) degree</span><br>
+                CSG Prins Maurits - Middelharnis, The Netherlands<br>
+                <span class="subtext">Highest level of Dutch secondary school | 2013-2020</span>
+            </p>
         </section>
     </div>
+
+    <section class="row" id="contact">
+        <div class="column contact-cards">
+            <h2>Contact</h2>
+
+            <div class="home-card contact-card">
+                <div class="card-icon">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <div class="card-text">
+                    <h4>Olivier</h4>
+                    <p>check out what I do</p>
+                </div>
+                <div class="arrow-icon">
+                    <i class="bx bx-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="home-card contact-card">
+                <div class="card-icon">
+                    <i class='bx bxl-github'></i>
+                </div>
+                <div class="card-text">
+                    <h4>GitHub</h4>
+                    <p>check out my work & codes</p>
+                </div>
+                <div class="arrow-icon">
+                    <i class="bx bx-chevron-right"></i>
+                </div>
+            </div>
+
+        </div>
+        <form class="form" action="" method="post">Form</form>
+    </section>
 </main>
 
 <footer>

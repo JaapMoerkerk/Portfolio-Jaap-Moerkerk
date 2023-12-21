@@ -1,7 +1,12 @@
 /*General styling*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
+    color: white;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,10 +29,20 @@ body {
     flex-direction: column;
 }
 
-/*Color classes*/
+/*Color and text classes*/
 .prim-blue {
     color: #6aa0ff;
     font-weight: 700;
+}
+
+.bold-p-title {
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: 2s ease;
+}
+
+.subtext {
+    font-weight: 300;
 }
 
 /*Header & navbar*/
@@ -185,7 +200,7 @@ main {
 }
 
 .home-card i {
-    font-size: 25px;
+    font-size: 30px;
     transition: 0.2s ease;
 }
 
@@ -302,8 +317,8 @@ main {
 
 .half-page-card{
     width: 100%;
-    padding: 0 5vw;
-    margin: 0 1vw;
+    padding: 0 2vw;
+    margin: 0 2vw;
     background: rgba(0,0,0,0.18);
     border-radius: 25px;
     color: #fff;
@@ -316,12 +331,44 @@ main {
 
 .half-page-card:hover{
     background: rgba(0,0,0,0.5);
-    margin: 0 1vw;
-    padding: 0 5vw;
+    margin: 0 0vw;
+    padding: 0 4vw;
 }
 
 .half-page-card:hover h2{
     color: #6aa0ff;
+}
+
+.half-page-card:hover .bold-p-title{
+    color: #6aa0ff;
+}
+
+.half-page-card p{
+    margin: 5vh 0;
+    font-weight: 600;
+}
+
+/*Section 'Contact'*/
+#contact{
+    width: 90vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-cards{
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30vw;
+    margin: 5vh 2.5vw;
+}
+
+.contact-card{
+    margin: 20px 0;
+}
+
+.form{
+    width: 50vw;
+    margin: 5vh 2.5vw;
 }
 
 /*Footer*/
