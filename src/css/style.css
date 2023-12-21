@@ -150,11 +150,9 @@ main {
 
 /*Section 'Home cards'*/
 #home-cards {
-    margin-top: 50px;
-    padding: 0 50px;
+    margin: 50px 0;
     display: flex;
-    flex-wrap: nowrap;
-    gap: 24px;
+    justify-content: space-between;
     width: 90vw;
 }
 
@@ -175,6 +173,12 @@ main {
 .home-card:hover {
     background: rgba(0, 0, 0, 0.5);
     border: 1px solid #6aa0ff;
+}
+
+#home-cards a {
+    text-decoration: none;
+    display: flex;
+    width: 28vw;
 }
 
 .card-icon {
@@ -286,6 +290,11 @@ main {
 
 #skills h2 {
     color: #fff;
+    transition: 1s ease;
+}
+
+#skills:hover h2{
+    color: #6aa0ff;
 }
 
 .skills-icons {
@@ -317,22 +326,37 @@ main {
 
 .half-page-card{
     width: 100%;
-    padding: 0 2vw;
-    margin: 0 2vw;
     background: rgba(0,0,0,0.18);
     border-radius: 25px;
     color: #fff;
     transition: 2s ease;
+    padding: 2vh 2vw;
 }
 
-.half-page-card h2{
-    transition: 2s ease;
+#experience{
+    margin-right: 2vw;
+}
+
+#education{
+    margin-left: 2vw;
+}
+
+#experience:hover{
+    margin-right: 0;
+    padding: 2vh 3vw;
+}
+
+#education:hover{
+    margin-left: 0;
+    padding: 2vh 3vw;
 }
 
 .half-page-card:hover{
     background: rgba(0,0,0,0.5);
-    margin: 0 0;
-    padding: 0 4vw;
+}
+
+.half-page-card h2{
+    transition: 2s ease;
 }
 
 .half-page-card:hover h2{
@@ -353,22 +377,84 @@ main {
     width: 90vw;
     justify-content: space-evenly;
     align-items: center;
+    margin: 10vh 0 5vh 0;
+    padding: 2vh 2vw;
 }
 
-.contact-cards{
-    justify-content: space-evenly;
-    align-items: center;
+#contact h2{
+    transition: 1s ease;
+}
+
+#contact:hover h2{
+    color: #6aa0ff;
+}
+
+.contact-left-column{
     width: 30vw;
     margin: 5vh 2.5vw;
+    justify-content: space-evenly;
 }
 
-.contact-card{
-    margin: 20px 0;
+.contact-icons{
+    justify-content: center;
+}
+
+.contact-icons i{
+    font-size: 4em;
+    cursor: pointer;
+}
+
+.contact-icons a {
+    color: #fff;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.github:hover{
+    color: rgb(128, 128, 128);
+}
+
+.whatsapp:hover{
+    color: #25D366;
+}
+
+.linkedin:hover{
+    color: #0077B5;
+}
+
+.instagram:hover{
+    color: #C13584;
+}
+
+.contact-container{
+    align-items: center;
 }
 
 .form{
     width: 50vw;
     margin: 5vh 2.5vw;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.form input{
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    color: white;
+    border-radius: 15px;
+    margin: 10px;
+    font-size: 1.3em;
+    border: 1px solid rgba(0,0,0,0.5);
+    transition: 0.3s ease;
+}
+
+#submit:hover{
+    cursor: pointer;
+    background: #6aa0ff;
+}
+
+#submit{
+    background: rgba(0,0,0,0.5);
 }
 
 /*Footer*/
