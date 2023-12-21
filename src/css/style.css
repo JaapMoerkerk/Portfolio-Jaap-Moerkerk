@@ -214,6 +214,7 @@ main {
 
 /*Section 'About me'*/
 #about-me {
+    scroll-margin-top: 5vh;
     margin: 10vh 0;
     display: flex;
     align-items: center;
@@ -285,7 +286,6 @@ main {
 /*Section 'skills'*/
 #skills {
     width: 90vw;
-    /*min-height: 50vh;*/
 }
 
 #skills h2 {
@@ -334,6 +334,7 @@ main {
 }
 
 #experience{
+    scroll-margin-top: 5vh;
     margin-right: 2vw;
 }
 
@@ -374,15 +375,23 @@ main {
 
 /*Section 'Contact'*/
 #contact{
+    scroll-margin-top: 5vh;
     width: 90vw;
     justify-content: space-evenly;
     align-items: center;
     margin: 10vh 0 5vh 0;
     padding: 2vh 2vw;
+    background: rgba(0,0,0,0.18);
+    border-radius: 50px;
+    transition: 2s ease;
+}
+
+#contact:hover{
+    background: rgba(0,0,0,0.5);
 }
 
 #contact h2{
-    transition: 1s ease;
+    transition: 2s ease;
 }
 
 #contact:hover h2{
@@ -393,10 +402,12 @@ main {
     width: 30vw;
     margin: 5vh 2.5vw;
     justify-content: space-evenly;
+    height: 100%;
 }
 
 .contact-icons{
     justify-content: center;
+    margin: 2vh 0;
 }
 
 .contact-icons i{
@@ -450,7 +461,7 @@ main {
 
 #submit:hover{
     cursor: pointer;
-    background: #6aa0ff;
+    border: 1px solid #6aa0ff;
 }
 
 #submit{
