@@ -5,10 +5,6 @@ require "./vendor/autoload.php";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
-var_dump($_POST);
-exit;
-
-
 if (isset($_POST["submit"]) && !empty($_POST["fullname"])) {
 //Getting form submission details through HTTP post request
     $fullname = $_POST["fullname"];
@@ -27,14 +23,16 @@ if (isset($_POST["submit"]) && !empty($_POST["fullname"])) {
 //Global use vars
     $formEmail = "form@jaapmoerkerk.nl";
     $recipientEmail = "jaapiemoerkerk@hotmail.com";
+    $password = "Minimormel";
+    $host = "ams42.siteground.eu";
 
 //SMTP server authentication (SiteGround.com)
     $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->SMTPAuth = true;
-    $mail->Host = "ams42.siteground.eu";
+    $mail->Host = $host;
     $mail->Username = $formEmail;
-    $mail->Password = "Minimormel";
+    $mail->Password = $password;
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
