@@ -331,7 +331,7 @@ main {
 
 .half-page-card:hover{
     background: rgba(0,0,0,0.5);
-    margin: 0 0vw;
+    margin: 0 0;
     padding: 0 4vw;
 }
 
