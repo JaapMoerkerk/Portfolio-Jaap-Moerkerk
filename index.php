@@ -1,3 +1,22 @@
+<?php
+session_start();
+
+$_SESSION['message'] = ". . . . . .";
+
+if (isset($_SESSION['form_submitted']) && $_SESSION['form_submitted']) {
+    // Clear the session variable
+    $_SESSION['message'] = "Thanks for reaching out. I'll be in touch through " . $_SESSION['email'] . ".";
+    $_SESSION['form_submitted'] = false;
+    unset($_POST["submit"]);
+}
+
+if (isset($_SESSION['form_error']) && $_SESSION['form_error']){
+    $_SESSION['message'] = "Something went wrong submitting the form. Try again later or use another form of contact.";
+    $_SESSION['form_error'] = false;
+    unset($_POST['submit']);
+}
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -30,48 +49,54 @@
     <section id="home-titles">
         <h2>This is <span>Jaap Moerkerk</span></h2>
         <h3>Creative Full Stack Web Developer</h3>
-        <span>. . . . . .</span>
+        <span><?=$_SESSION['message']?></span>
         <p>Design | Development | Creative Thinking | Commercial Implementation</p>
     </section>
 
     <section id="home-cards">
-        <a href="#experience"><div class="home-card">
-            <div class="card-icon">
-                <i class='bx bx-briefcase'></i>
+        <a href="#experience">
+            <div class="home-card">
+                <div class="card-icon">
+                    <i class='bx bx-briefcase'></i>
+                </div>
+                <div class="card-text">
+                    <h4>Qualification</h4>
+                    <p>education & experience</p>
+                </div>
+                <div class="arrow-icon">
+                    <i class="bx bx-chevron-down"></i>
+                </div>
             </div>
-            <div class="card-text">
-                <h4>Qualification</h4>
-                <p>education & experience</p>
-            </div>
-            <div class="arrow-icon">
-                <i class="bx bx-chevron-down"></i>
-            </div>
-        </div></a>
+        </a>
 
-        <a href="#about-me"><div class="home-card about-card">
-            <div class="card-icon">
-                <i class='bx bxs-user'></i></div>
-            <div class="card-text">
-                <h4>About</h4>
-                <p>find out who I am</p>
+        <a href="#about-me">
+            <div class="home-card about-card">
+                <div class="card-icon">
+                    <i class='bx bxs-user'></i></div>
+                <div class="card-text">
+                    <h4>About</h4>
+                    <p>find out who I am</p>
+                </div>
+                <div class="arrow-icon">
+                    <i class="bx bx-chevron-down"></i>
+                </div>
             </div>
-            <div class="arrow-icon">
-                <i class="bx bx-chevron-down"></i>
-            </div>
-        </div></a>
+        </a>
 
-        <a href="#contact"><div class="home-card">
-            <div class="card-icon">
-                <i class='bx bxs-megaphone'></i>
+        <a href="#contact">
+            <div class="home-card">
+                <div class="card-icon">
+                    <i class='bx bxs-megaphone'></i>
+                </div>
+                <div class="card-text">
+                    <h4>Contact</h4>
+                    <p>and useful links</p>
+                </div>
+                <div class="arrow-icon">
+                    <i class="bx bx-chevron-down"></i>
+                </div>
             </div>
-            <div class="card-text">
-                <h4>Contact</h4>
-                <p>and useful links</p>
-            </div>
-            <div class="arrow-icon">
-                <i class="bx bx-chevron-down"></i>
-            </div>
-        </div></a>
+        </a>
     </section>
 
     <section id="about-me">
@@ -155,18 +180,20 @@
                 <div class="row contact-icons">
                     <a target="_blank" class="whatsapp" href="https://wa.me/31624852790"><i class="bx bxl-whatsapp"></i></a>
                     <a target="_blank" class="github" href="https://github.com/JaapMoerkerk"><i
-                            class="bx bxl-github"></i></a>
+                                class="bx bxl-github"></i></a>
                     <a target="_blank" class="instagram" href="https://www.instagram.com/jape_dj/"><i
-                            class="bx bxl-instagram"></i></a>
+                                class="bx bxl-instagram"></i></a>
                     <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/jaap-moerkerk-08612611b/"><i
-                            class="bx bxl-linkedin"></i></a>
+                                class="bx bxl-linkedin"></i></a>
                 </div>
             </div>
-            <form class="form column" action="./form.php" method="post">
-                <label for="fullname"></label><input name="fullname" placeholder="Name" type="text" id="fullname" required>
+            <form class="form column" action="form-processing.php" method="post">
+                <label for="fullname"></label><input name="fullname" placeholder="Name" type="text" id="fullname"
+                                                     required>
                 <label for="email"></label><input name="email" placeholder="Email" type="text" id="email" required>
                 <label for="tel"></label><input name="tel" placeholder="Phone number (optional)" type="tel" id="tel">
-                <label for="message"></label><input name="message" placeholder="Message" type="text" id="message" required>
+                <label for="message"></label><input name="message" placeholder="Message" type="text" id="message"
+                                                    required>
                 <label for="submit"></label><input name="submit" value="Send" type="submit" id="submit">
             </form>
         </div>
@@ -180,6 +207,5 @@
         | Jaap Moerkerk
     </p>
 </footer>
-
 </body>
 </html>

@@ -1,18 +1,19 @@
 <?php
-
-require "./vendor/autoload.php";
+require('./vendor/autoload.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+
+session_start();
 
 if (isset($_POST["submit"]) && !empty($_POST["fullname"])) {
-//Getting form submission details through HTTP post request
+    // Getting form submission details through HTTP post request
     $fullname = $_POST["fullname"];
     $tel = $_POST["tel"] ?? "";
     $email = $_POST["email"] ?? "";
+    $_SESSION["email"] = $_POST["email"];
     $message = $_POST["message"] ?? "";
 
-//Mail strings
+    // Mail strings
     $subject = "jaapmoerkerk.nl: new message from $fullname, $email";
     $body = "Contact form jaapmoerkerk.nl
         Message from $fullname
@@ -20,13 +21,13 @@ if (isset($_POST["submit"]) && !empty($_POST["fullname"])) {
         Phone number: $tel
         Message: $message";
 
-//Global use vars
+    // Global use vars
     $formEmail = "form@jaapmoerkerk.nl";
     $recipientEmail = "jaapiemoerkerk@hotmail.com";
     $password = "Minimormel";
     $host = "ams42.siteground.eu";
 
-//SMTP server authentication (SiteGround.com)
+    // SMTP server authentication (SiteGround.com)
     $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->SMTPAuth = true;
@@ -35,20 +36,24 @@ if (isset($_POST["submit"]) && !empty($_POST["fullname"])) {
     $mail->Password = $password;
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
-//Constructing and sending mail
+    // Constructing and sending mail
     $mail->setFrom($formEmail, $fullname);
     $mail->addAddress($recipientEmail, "Jaap Moerkerk");
+
     $mail->Subject = $subject;
     $mail->Body = $body;
 
     try {
         $mail->send();
-        echo "Mail got sent with the following message: " . $body;
+        $_SESSION['form_submitted'] = true;
+        $_SESSION['email'] = $email;
     } catch (Exception $e) {
-        echo "Mailer error: " . $mail->ErrorInfo;
+        $_SESSION['form_error'] = true;
     }
-} else {
-    echo "Form not submitted and/or name wasn't filled out.";
+    // Redirect back to the original page
 }
+header("Location: index.php");
+exit();
+
+
