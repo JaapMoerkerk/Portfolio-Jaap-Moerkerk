@@ -26,6 +26,7 @@ if (isset($_SESSION['form_error']) && $_SESSION['form_error']){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="icon" type="image/x-icon" href="./src/img/favicon.png">
     <title>Jaap Moerkerk - Creative Developer</title>
 </head>
 <body>
@@ -35,7 +36,7 @@ if (isset($_SESSION['form_error']) && $_SESSION['form_error']){
         <h1>Jaap Moerkerk</h1>
     </div>
     <nav>
-        <a href="#home">Home</a>
+        <a href="/">Home</a>
         <a href="#about-me">About me</a>
         <a href="#experience">Experience & Skills</a>
         <a href="#contact">Contact</a>
@@ -109,7 +110,7 @@ if (isset($_SESSION['form_error']) && $_SESSION['form_error']){
                 constantly expanding my professional scope with development projects, personal or commercial.
                 I've always been interested in the more social sides of the field, which is why I started my own
                 freelance web design agency
-                <span class="prim-blue"><a href="#">Web Design Jaap</a></span>, providing complete websites, hosting and
+                <span class="prim-blue">Web Design Jaap</span>, providing complete websites, hosting and
                 maintenance to small entrepreneurs and private endeavours.
             </p>
         </div>
