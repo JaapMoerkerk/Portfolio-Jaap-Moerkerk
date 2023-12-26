@@ -322,6 +322,8 @@ main {
 .half-page-cards{
     justify-content: space-evenly;
     width: 90vw;
+    display: flex;
+    flex-direction: row;
 }
 
 .half-page-card{
@@ -439,6 +441,8 @@ main {
 
 .contact-container{
     align-items: center;
+    display: flex;
+    flex-direction: row;
 }
 
 .form{
@@ -492,5 +496,110 @@ footer p {
 
 /*Mobile*/
 @media (max-width: 1000px) {
+    /*Header bar*/
+    .header-bar nav{
+        display: none;
+    }
+    .header-bar .hire-me-btn {
+        display: none;
+    }
+    .header-bar img{
+        margin-left: 30px;
+    }
+    .title-image{
+        margin: auto;
+    }
+    .title-image h1{
+        margin-right: 30px;
+    }
 
+    /*Home titles*/
+    #home-titles{
+        margin: 0 20px;
+    }
+    #home-titles h2, #home-titles h3 {
+        font-size: 1.6em;
+    }
+    #home-titles p {
+        font-size: 1em;
+    }
+
+    /*Home card hide*/
+    #home-cards{
+        display: none;
+    }
+
+    /*About me*/
+    #about-me{
+        flex-direction: column;
+    }
+    #about-me:hover{
+        margin: 10vh 0;
+        width: 90vw;
+    }
+    .about-me-text{
+        max-width: 80vw;
+    }
+    #about-me img{
+        max-width: 60vw;
+        margin: 0 2vw 20px 0;
+    }
+    #about-me:hover .about-me-text {
+        margin: 5vh 2vw;
+    }
+    #about-me:hover img{
+        margin: 0 2vw 20px 0;
+    }
+
+    /*Skills icons*/
+    .skills-icons{
+        font-size: 2em;
+        margin: 5vh 0;
+    }
+
+    /*Half page card*/
+    .half-page-cards{
+        flex-direction: column;
+    }
+    #experience{
+        margin: 2vh auto;
+        width: 80vw;
+    }
+    #experience:hover{
+        margin: 2vh auto;
+        padding: 2vh 2vw;
+    }
+    #education{
+        margin: 2vh auto;
+        width: 80vw;
+    }
+    #education:hover{
+        margin: 2vh auto;
+        padding: 2vh 2vw;
+    }
+    #contact .form{
+        width: 80vw;
+    }
+    .contact-left-column, .form{
+        margin: 2vh 2.5vw;
+    }
+    #contact p{
+        display: none;
+    }
+    #contact{
+        width: 80vw;
+        margin: 3vh 0 2vh 0;
+    }
+    .contact-container{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 350px) {
+    .header-bar img{
+        display: none;
+    }
+    .header-bar h1{
+        margin-right: 0;
+    }
 }

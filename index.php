@@ -131,7 +131,7 @@ if (isset($_SESSION['form_error']) && $_SESSION['form_error']){
         </div>
     </section>
 
-    <div class="row half-page-cards">
+    <div class="half-page-cards">
         <section id="experience" class="half-page-card">
             <h2>Work experience</h2>
             <p>
@@ -173,7 +173,7 @@ if (isset($_SESSION['form_error']) && $_SESSION['form_error']){
 
     <section class="column" id="contact">
         <h2>Contact</h2>
-        <div class="row contact-container">
+        <div class="contact-container">
             <div class="column contact-left-column">
                 <p>Do you want to work with or get in touch with me? Don't hesitate and send me a message!
                     <br><br>
