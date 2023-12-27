@@ -3,6 +3,13 @@ require('./vendor/autoload.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
 
+$credentialsJson = file_get_contents('./credentials.json');
+$credentials = json_decode($credentialsJson, true);
+
+if ($credentials === null){
+    die('JSON credentials file could not be decoded.');
+}
+
 session_start();
 
 if (isset($_POST["submit"]) && !empty($_POST["fullname"])) {
@@ -21,11 +28,12 @@ if (isset($_POST["submit"]) && !empty($_POST["fullname"])) {
         Phone number: $tel
         Message: $message";
 
-    // Global use vars
-    $formEmail = "form@jaapmoerkerk.nl";
-    $recipientEmail = "jaapiemoerkerk@hotmail.com";
-    $password = "Minimormel";
-    $host = "ams42.siteground.eu";
+    // Credentials from credentials file
+    $formEmail = $credentials['mail_server']['username'];
+    $recipientEmail = $credentials['mail_server']['recipient_email'];
+    $password = $credentials['mail_server']['password'];
+    $host = $credentials['mail_server']['host'];
+    $recipientName = $credentials['mail_server']['recipient_name'];
 
     // SMTP server authentication (SiteGround.com)
     $mail = new PHPMailer(true);
@@ -39,7 +47,7 @@ if (isset($_POST["submit"]) && !empty($_POST["fullname"])) {
 
     // Constructing and sending mail
     $mail->setFrom($formEmail, $fullname);
-    $mail->addAddress($recipientEmail, "Jaap Moerkerk");
+    $mail->addAddress($recipientEmail, $recipientName);
 
     $mail->Subject = $subject;
     $mail->Body = $body;
